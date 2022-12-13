@@ -15,4 +15,8 @@ lsp.setup_nvim_cmp({
     mapping = cmp_mappings
 })
 
+lsp.configure('typescript-language-server', {
+    filetypes = {'typescript', 'typescriptreact', 'typescript.tsx'}
+})
+
 lsp.setup()

@@ -6,7 +6,7 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
-    use 'folke/tokyonight.nvim'
+    use 'tanvirtin/monokai.nvim' 
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
         -- or                            , branch = '0.1.x',
@@ -45,4 +45,16 @@ return require('packer').startup(function(use)
             ts_update()
         end,
     }
+    use 'preservim/nerdcommenter'
+    use {
+        "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
+    }
+    use 'jose-elias-alvarez/null-ls.nvim'
+    use 'MunifTanjim/prettier.nvim'
+    use 'windwp/nvim-ts-autotag'
+    use {
+        'lewis6991/gitsigns.nvim',
+        tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
+}
 end)
