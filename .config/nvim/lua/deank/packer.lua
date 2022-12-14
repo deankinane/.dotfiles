@@ -1,12 +1,13 @@
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
 
 -- Only required if you have packer configured as `opt`
-vim.cmd [[packadd packer.nvim]]
+--vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
     -- Packer can manage itself
+    -- Packer
     use 'wbthomason/packer.nvim'
-    use 'tanvirtin/monokai.nvim' 
+    use 'olimorris/onedarkpro.nvim'
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
         -- or                            , branch = '0.1.x',
@@ -44,7 +45,7 @@ return require('packer').startup(function(use)
             local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
             ts_update()
         end,
-    }
+    } 
     use 'preservim/nerdcommenter'
     use {
         "windwp/nvim-autopairs",
@@ -56,5 +57,5 @@ return require('packer').startup(function(use)
     use {
         'lewis6991/gitsigns.nvim',
         tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
-}
+    }
 end)
