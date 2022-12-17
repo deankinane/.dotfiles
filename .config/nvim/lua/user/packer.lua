@@ -35,5 +35,9 @@ return require('packer').startup(function(use)
             require('gitsigns').setup()
         end
     })
-    -- use("windwp/nvim-ts-autotag")
+    use({
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate'
+    })
+    use("windwp/nvim-ts-autotag")
 end)
