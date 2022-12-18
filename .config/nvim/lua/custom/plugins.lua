@@ -1,9 +1,6 @@
 return function(use)
 
-    use({'ThePrimeagen/harpoon',
-        config = function ()
-        end,
-    })
+    use('ThePrimeagen/harpoon')
     use({
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end
@@ -21,4 +18,5 @@ return function(use)
         end,
     })
     use("windwp/nvim-ts-autotag")
+    use("jose-elias-alvarez/null-ls.nvim")
 end
