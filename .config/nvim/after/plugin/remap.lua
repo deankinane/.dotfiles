@@ -11,3 +11,4 @@ vim.keymap.set('n', '<leader>l', function() ui.nav_file(4) end)
 
 -- Neovim
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>w", vim.cmd.write)
