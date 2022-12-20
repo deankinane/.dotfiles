@@ -20,4 +20,6 @@ return function(use)
     use("windwp/nvim-ts-autotag")
     use("jose-elias-alvarez/null-ls.nvim")
     use("rafamadriz/friendly-snippets")
+    use("deankinane/blaze.nvim")
+    use("nvim-treesitter/playground")
 end

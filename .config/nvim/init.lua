@@ -1,4 +1,4 @@
--- Install packer
+-- Install packerini
 local install_path = vim.fn.stdpath 'data' .. '/site/pack/packer/start/packer.nvim'
 local is_bootstrap = false
 if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
@@ -117,7 +117,7 @@ vim.wo.signcolumn = 'yes'
 
 -- Set colorscheme
 vim.o.termguicolors = true
-vim.cmd [[colorscheme onedark]]
+vim.cmd [[colorscheme blaze]]
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
@@ -153,7 +153,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 require('lualine').setup {
   options = {
     icons_enabled = false,
-    theme = 'onedark',
+    theme = 'blaze',
     component_separators = '|',
     section_separators = '',
   },
@@ -173,9 +173,9 @@ require('indent_blankline').setup {
 -- See `:help gitsigns.txt`
 require('gitsigns').setup {
   signs = {
-    add = { text = '+' },
-    change = { text = '~' },
-    delete = { text = '_' },
+    add = { text = '│' },
+    change = { text = '│' },
+    delete = { text = '│' },
     topdelete = { text = '‾' },
     changedelete = { text = '~' },
   },
@@ -337,7 +337,7 @@ require('mason').setup()
 
 -- Enable the following language servers
 -- Feel free to add/remove any LSPs that you want here. They will automatically be installed
-local servers = {'rust_analyzer', 'tsserver', 'sumneko_lua'}
+local servers = {'rust_analyzer', 'tsserver', 'sumneko_lua', 'tailwindcss'}
 
 -- Ensure the servers above are installed
 require('mason-lspconfig').setup {
