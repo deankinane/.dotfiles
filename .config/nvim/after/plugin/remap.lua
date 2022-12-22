@@ -43,3 +43,6 @@ map('i', '<C-v>', '<esc>bi<<esc>ea/><esc>hi') -- convert any word into a self cl
 
 -- nvim-tree
 map('n', '<leader>e', ':NvimTreeToggle<cr>')
+
+-- diagnostics
+map('n', '<leader>d', vim.diagnostic.open_float)
