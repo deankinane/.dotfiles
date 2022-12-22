@@ -22,4 +22,10 @@ return function(use)
     use("rafamadriz/friendly-snippets")
     use("deankinane/blaze.nvim")
     use("nvim-treesitter/playground")
+    use({
+        'nvim-tree/nvim-tree.lua',
+        requires = {
+            'nvim-tree/nvim-web-devicons', -- optional, for file icons
+        },
+    })
 end

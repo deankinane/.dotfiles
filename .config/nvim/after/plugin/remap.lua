@@ -17,7 +17,6 @@ map('n', '<leader>3', function() term.gotoTerminal(3) end)
 map('n', '<leader>4', function() term.gotoTerminal(4) end)
 
 -- Neovim
-map('n', '<leader>pv', vim.cmd.Ex)
 map('n', '<leader>w', vim.cmd.write)
 map('t', '<leader><ESC>', '<C-\\><C-n>')
 map('n', '<leader><leader>x', vim.cmd.so)
@@ -40,3 +39,5 @@ map({"n", "v"}, "<leader>d", [["_d]]) -- Delete to void register
 
 map("n", "Q", "<nop>")
 
+-- nvim-tree
+map('n', '<leader>e', ':NvimTreeToggle<cr>')
