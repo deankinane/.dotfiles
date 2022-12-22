@@ -17,7 +17,6 @@ return function(use)
             require("colorizer").setup()
         end,
     })
-    use("windwp/nvim-ts-autotag")
     use("jose-elias-alvarez/null-ls.nvim")
     use("rafamadriz/friendly-snippets")
     use("deankinane/blaze.nvim")
@@ -25,7 +24,7 @@ return function(use)
     use({
         'nvim-tree/nvim-tree.lua',
         requires = {
-            'nvim-tree/nvim-web-devicons', -- optional, for file icons
+            'nvim-tree/nvim-web-devicons',
         },
     })
 end

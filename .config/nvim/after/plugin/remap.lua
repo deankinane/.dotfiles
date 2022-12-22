@@ -6,7 +6,7 @@ local ui = require('harpoon.ui')
 local term = require('harpoon.term')
 
 map('n', '<C-a>',function() mark.add_file() end)
-map('n', '<C-e>', function() ui.toggle_quick_menu() end)
+map('n', '<C-h>', function() ui.toggle_quick_menu() end)
 map('n', '<leader>h', function() ui.nav_file(1) end)
 map('n', '<leader>j', function() ui.nav_file(2) end)
 map('n', '<leader>k', function() ui.nav_file(3) end)
@@ -38,6 +38,8 @@ map("n", "<leader>Y", [["+Y]])
 map({"n", "v"}, "<leader>d", [["_d]]) -- Delete to void register
 
 map("n", "Q", "<nop>")
+map("i", "<C-s>", "<esc>yiwi<lt><esc>ea></><esc>hpF>i") -- convert any word to a full html open and closed tag
+map('i', '<C-S>', '<esc>bi<<esc>ea/><esc>hi') -- convert any word into a self closing html tag
 
 -- nvim-tree
 map('n', '<leader>e', ':NvimTreeToggle<cr>')
