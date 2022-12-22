@@ -38,8 +38,8 @@ map("n", "<leader>Y", [["+Y]])
 map({"n", "v"}, "<leader>d", [["_d]]) -- Delete to void register
 
 map("n", "Q", "<nop>")
-map("i", "<C-s>", "<esc>yiwi<lt><esc>ea></><esc>hpF>i") -- convert any word to a full html open and closed tag
-map('i', '<C-S>', '<esc>bi<<esc>ea/><esc>hi') -- convert any word into a self closing html tag
+map("i", "<C-c>", "<esc>yiwi<lt><esc>ea></><esc>hpF>i") -- convert any word to a full html open and closed tag
+map('i', '<C-v>', '<esc>bi<<esc>ea/><esc>hi') -- convert any word into a self closing html tag
 
 -- nvim-tree
 map('n', '<leader>e', ':NvimTreeToggle<cr>')
