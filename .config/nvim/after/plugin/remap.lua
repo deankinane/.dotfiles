@@ -79,3 +79,5 @@ map("n","<leader>o", "<cmd>Lspsaga outline<CR>",{ silent = true })
 -- Hover Doc
 map("n", "K", "<cmd>Lspsaga hover_doc<CR>", { silent = true })
 
+-- Zen Mode
+map('n', '<leader>z', ':ZenMode<CR>')

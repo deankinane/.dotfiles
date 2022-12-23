@@ -28,12 +28,22 @@ return function(use)
         },
     })
     use({
-    "glepnir/lspsaga.nvim",
-    branch = "main",
-    config = function()
-        local saga = require("lspsaga")
+        "glepnir/lspsaga.nvim",
+        branch = "main",
+        config = function()
+            local saga = require("lspsaga")
 
-        saga.init_lsp_saga()
-    end,
-})
+            saga.init_lsp_saga()
+        end,
+    })
+    use {
+        "folke/zen-mode.nvim",
+        config = function()
+            require("zen-mode").setup {
+                -- your configuration comes here
+                -- or leave it empty to use the default settings
+                -- refer to the configuration section below
+            }
+        end
+    }
 end
