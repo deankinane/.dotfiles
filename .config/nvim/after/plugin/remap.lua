@@ -40,9 +40,42 @@ map({"n", "v"}, "<leader>d", [["_d]]) -- Delete to void register
 map("n", "Q", "<nop>")
 map("i", "<C-c>", "<esc>yiwi<lt><esc>ea></><esc>hpF>i") -- convert any word to a full html open and closed tag
 map('i', '<C-v>', '<esc>bi<<esc>ea/><esc>hi') -- convert any word into a self closing html tag
+map('n', 'q', ':q<CR>')
 
 -- nvim-tree
 map('n', '<leader>e', ':NvimTreeToggle<cr>')
 
 -- diagnostics
 map('n', '<leader>d', vim.diagnostic.open_float)
+
+-- lspsaga
+-- Lsp finder find the symbol definition implement reference
+-- if there is no implement it will hide
+-- when you use action in finder like open vsplit then you can
+-- use <C-t> to jump back
+map("n", "gh", "<cmd>Lspsaga lsp_finder<CR>", { silent = true })
+
+-- Code action
+map({"n","v"}, "<leader>ca", "<cmd>Lspsaga code_action<CR>", { silent = true })
+
+-- Rename
+map("n", "gr", "<cmd>Lspsaga rename<CR>", { silent = true })
+
+-- Peek Definition
+-- you can edit the definition file in this flaotwindow
+-- also support open/vsplit/etc operation check definition_action_keys
+-- support tagstack C-t jump back
+map("n", "gd", "<cmd>Lspsaga peek_definition<CR>", { silent = true })
+
+-- Show line diagnostics
+map("n", "<leader>cd", "<cmd>Lspsaga show_line_diagnostics<CR>", { silent = true })
+
+-- Show cursor diagnostics
+map("n", "<leader>cd", "<cmd>Lspsaga show_cursor_diagnostics<CR>", { silent = true })
+
+-- Outline
+map("n","<leader>o", "<cmd>Lspsaga outline<CR>",{ silent = true })
+
+-- Hover Doc
+map("n", "K", "<cmd>Lspsaga hover_doc<CR>", { silent = true })
+

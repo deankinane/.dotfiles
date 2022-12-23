@@ -27,4 +27,13 @@ return function(use)
             'nvim-tree/nvim-web-devicons',
         },
     })
+    use({
+    "glepnir/lspsaga.nvim",
+    branch = "main",
+    config = function()
+        local saga = require("lspsaga")
+
+        saga.init_lsp_saga()
+    end,
+})
 end
