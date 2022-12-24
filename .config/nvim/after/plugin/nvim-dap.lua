@@ -1,24 +1,25 @@
 local dap = require('dap')
 
-dap.adapters.chrome = {
-    type = 'executable',
-    command = 'node',
-    args = {vim.fn.stdpath('data') .. '/mason/bin/chrome-debug-adapter'}
-}
+-- dap.adapters.node2 = {
+--     type = 'executable',
+--     command = 'node',
+--     args = {vim.fn.stdpath('data') .. '/mason/packages/vscode-node-debug2/out/src/nodeDebug.js'}
+-- }
+require('dap-vscode-js').setup({
+    adapters = {'pwa-node'},
+    debugger_path = vim.fn.stdpath('data') .. '/mason/packages/js-debug-adapter'
+})
 
-for _, language in ipairs({ "typescript", "javascript", "typescriptreact" }) do
+for _, language in ipairs({ "typescript", "javascript" }) do
     dap.configurations[language] = {
         {
-            type = "chrome",
-            request = "launch",
-            program = '${file}',
-            cwd = vim.fn.getcwd(),
-            sourceMaps = true,
-            protocol = 'inspector',
-            port = 9222,
-            webRoot = '${workspaceFolder}'
-        },
+            name = 'Attach to process',
+            type = 'pwa-node',
+            request = 'attach',
+            processId = require('dap.utils').pick_process,
+            cwd = vim.fn.getcwd()
+        }
     }
 end
 
-dap.set_log_level('TRACE')
+-- dap.set_log_level('TRACE')

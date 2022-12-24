@@ -85,3 +85,4 @@ map('n', '<leader>z', ':ZenMode<CR>')
 -- DAP
 local dap = require('dap')
 map('n', '<F5>', dap.continue)
+map('n', '<F4>', dap.toggle_breakpoint)

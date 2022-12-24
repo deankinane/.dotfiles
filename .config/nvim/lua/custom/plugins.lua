@@ -47,6 +47,7 @@ return function(use)
         end
     })
     use('mfussenegger/nvim-dap')
+    use('mxsdev/nvim-dap-vscode-js')
     use('rcarriga/nvim-dap-ui')
     use('nvim-telescope/telescope-dap.nvim')
 end
