@@ -84,5 +84,10 @@ map('n', '<leader>z', ':ZenMode<CR>')
 
 -- DAP
 local dap = require('dap')
+local dap_widgets =   require('dap.ui.widgets')
+
 map('n', '<F5>', dap.continue)
 map('n', '<F4>', dap.toggle_breakpoint)
+map('n', '<F6>', dap.step_over)
+map('n', '<F7>', dap.step_into)
+map('n', '<C-v>', dap_widgets.hover)
