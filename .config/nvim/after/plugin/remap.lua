@@ -81,3 +81,7 @@ map("n", "K", "<cmd>Lspsaga hover_doc<CR>", { silent = true })
 
 -- Zen Mode
 map('n', '<leader>z', ':ZenMode<CR>')
+
+-- DAP
+local dap = require('dap')
+map('n', '<F5>', dap.continue)
