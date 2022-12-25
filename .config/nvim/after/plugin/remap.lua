@@ -85,9 +85,24 @@ map('n', '<leader>z', ':ZenMode<CR>')
 -- DAP
 local dap = require('dap')
 local dap_widgets =   require('dap.ui.widgets')
+local dapui = require('dapui')
+
+local function setBreakpointCondition()
+    local condition = vim.fn.input('Breakpoint condition (empty to cancel):')
+    if (condition ~= '') then
+        dap.set_breakpoint(condition)
+    end
+end
+
+local function openFrames()
+  local my_sidebar = dap_widgets.sidebar(dap_widgets.frames)
+  my_sidebar.open()
+end
 
 map('n', '<F5>', dap.continue)
-map('n', '<F4>', dap.toggle_breakpoint)
-map('n', '<F6>', dap.step_over)
-map('n', '<F7>', dap.step_into)
-map('n', '<C-v>', dap_widgets.hover)
+map('n', '<leader>b', dap.toggle_breakpoint)
+map('n', '<leader>B', setBreakpointCondition)
+map('n', '<F10>', dap.step_over)
+map('n', '<F11>', dap.step_into)
+map('n', '<leader>dv', dap_widgets.hover)
+map('n', '<leader>dd', dapui.toggle)
