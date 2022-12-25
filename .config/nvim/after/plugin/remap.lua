@@ -42,9 +42,6 @@ map("i", "<C-c>", "<esc>yiwi<lt><esc>ea></><esc>hpF>i") -- convert any word to a
 map('i', '<C-v>', '<esc>bi<<esc>ea/><esc>hi') -- convert any word into a self closing html tag
 map('n', 'q', ':q<CR>')
 
--- nvim-tree
-map('n', '<leader>e', ':NvimTreeToggle<cr>')
-
 -- diagnostics
 map('n', '<leader>d', vim.diagnostic.open_float)
 
@@ -85,7 +82,7 @@ map('n', '<leader>z', ':ZenMode<CR>')
 -- DAP
 local dap = require('dap')
 local dap_widgets =   require('dap.ui.widgets')
-local dapui = require('dapui')
+-- local dapui = require('dapui')
 
 local function setBreakpointCondition()
     local condition = vim.fn.input('Breakpoint condition (empty to cancel):')
@@ -94,15 +91,10 @@ local function setBreakpointCondition()
     end
 end
 
-local function openFrames()
-  local my_sidebar = dap_widgets.sidebar(dap_widgets.frames)
-  my_sidebar.open()
-end
-
 map('n', '<F5>', dap.continue)
 map('n', '<leader>b', dap.toggle_breakpoint)
 map('n', '<leader>B', setBreakpointCondition)
 map('n', '<F10>', dap.step_over)
 map('n', '<F11>', dap.step_into)
 map('n', '<leader>dv', dap_widgets.hover)
-map('n', '<leader>dd', dapui.toggle)
+-- map('n', '<leader>dd', dapui.toggle)

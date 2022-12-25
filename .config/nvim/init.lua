@@ -6,9 +6,6 @@ if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
   vim.fn.execute('!git clone https://github.com/wbthomason/packer.nvim ' .. install_path)
   vim.cmd [[packadd packer.nvim]]
 end
--- Disable netrw
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
 
 require('packer').startup(function(use)
   -- Package manager
@@ -430,9 +427,6 @@ cmp.setup {
     { name = 'luasnip' },
   },
 }
-
--- nvim-tree setup
-require('nvim-tree').setup()
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

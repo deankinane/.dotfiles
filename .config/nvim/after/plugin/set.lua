@@ -34,3 +34,5 @@ vim.g.clipboard = {
     },
     cache_enabled = 0
 }
+
+vim.opt.re = 0

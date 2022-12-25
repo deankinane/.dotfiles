@@ -20,13 +20,7 @@ return function(use)
     use('jose-elias-alvarez/null-ls.nvim')
     use('rafamadriz/friendly-snippets')
     use('deankinane/blaze.nvim')
-    use('nvim-treesitter/playground')
-    use({
-        'nvim-tree/nvim-tree.lua',
-        requires = {
-            'nvim-tree/nvim-web-devicons',
-        },
-    })
+    -- use('nvim-treesitter/playground')
     use({
         'glepnir/lspsaga.nvim',
         branch = 'main',
@@ -48,6 +42,4 @@ return function(use)
     })
     use('mfussenegger/nvim-dap')
     use('mxsdev/nvim-dap-vscode-js')
-    use('rcarriga/nvim-dap-ui')
-    use('nvim-telescope/telescope-dap.nvim')
 end
