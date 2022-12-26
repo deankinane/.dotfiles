@@ -21,6 +21,7 @@ map('n', '<leader>w', vim.cmd.write)
 map('t', '<leader><ESC>', '<C-\\><C-n>')
 map('n', '<leader><leader>x', vim.cmd.so)
 map('n', '<leader>c', ':bd<cr>')
+map('n', '<leader>e', vim.cmd.Ex)
 
 map("v", "J", ":m '>+1<CR>gv=gv") -- Move selection up and down
 map("v", "K", ":m '<-2<CR>gv=gv")
