@@ -10,7 +10,12 @@ end
 
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 require("null-ls").setup({
-    sources = { require("null-ls").builtins.formatting.prettierd },
+    sources = { require("null-ls").builtins.formatting.prettierd.with({
+        env = {
+            PRETTIERD_DEFAULT_CONFIG = vim.fn.expand("~/.config/nvim/utils/linting/.prettierrc.json"),
+        },
+    }),
+    },
     on_attach = function(client, bufnr)
         if client.supports_method("textDocument/formatting") then
             vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
