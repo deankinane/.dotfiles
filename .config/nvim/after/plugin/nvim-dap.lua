@@ -36,7 +36,7 @@ dapui.setup({
         {
             elements = {
                 { id = 'scopes', size = 0.75 },
-                { id = 'watches' },
+                { id = 'watches', size = 0.25 },
             },
             size = 50,
             position = 'left'
@@ -50,7 +50,7 @@ dapui.setup({
         },
         {
             elements = {
-                { id = 'repl' },
+                'repl',
             },
             size = 0.25,
             position = 'bottom'
