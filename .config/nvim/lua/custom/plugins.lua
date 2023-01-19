@@ -19,7 +19,7 @@ return function(use)
     })
     use('jose-elias-alvarez/null-ls.nvim')
     use('rafamadriz/friendly-snippets')
-    use('deankinane/blaze.nvim')
+    use('folke/tokyonight.nvim')
     -- use('nvim-treesitter/playground')
     use({
         'glepnir/lspsaga.nvim',
@@ -43,4 +43,5 @@ return function(use)
     use('mfussenegger/nvim-dap')
     use('mxsdev/nvim-dap-vscode-js')
     use('rcarriga/nvim-dap-ui')
+    use('OmniSharp/omnisharp-vim')
 end
