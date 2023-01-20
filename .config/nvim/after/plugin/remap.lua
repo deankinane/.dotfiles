@@ -99,3 +99,8 @@ map('n', '<F10>', dap.step_over)
 map('n', '<F11>', dap.step_into)
 map('n', '<leader>dv', dap_widgets.hover)
 map('n', '<leader>dd', dapui.toggle)
+map('n', '<leader>ff', ':NvimTreeFocus<CR>')
+map('n', '<leader>fv', ':NvimTreeFindFile<CR>')
+
+map('n', '<C-j>', ':wincmd h<CR>')
+map('n', '<C-l>', ':wincmd l<CR>')

@@ -26,8 +26,7 @@ return function(use)
         branch = 'main',
         config = function()
             local saga = require('lspsaga')
-
-            saga.init_lsp_saga()
+            saga.setup({})
         end,
     })
     use({
@@ -43,5 +42,6 @@ return function(use)
     use('mfussenegger/nvim-dap')
     use('mxsdev/nvim-dap-vscode-js')
     use('rcarriga/nvim-dap-ui')
-    use('OmniSharp/omnisharp-vim')
+    use('nvim-tree/nvim-web-devicons')
+    use('nvim-tree/nvim-tree.lua')
 end
